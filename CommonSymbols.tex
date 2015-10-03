@@ -1,99 +1,106 @@
+%-------------------------------------------------------------------------------------------
 %Common math symbols
+%
+%
+%-------------------------------------------------------------------------------------------
+
+
 	%Number fields
-		\newcommand{\Real}{\mathbb{R}}
-		\newcommand{\Natural}{\mathbb{N}}
-		\newcommand{\Relative}{\mathbb{Z}}
-		\newcommand{\Rational}{\mathbb{Q}}
-		\newcommand{\Complex}{\mathbb{C}}
-		\newcommand{\KField}{\mathbb{K}}
+		\providecommand{\Real}{\mathbb{R}}
+		\providecommand{\Natural}{\mathbb{N}}
+		\providecommand{\Relative}{\mathbb{Z}}
+		\providecommand{\Rational}{\mathbb{Q}}
+		\providecommand{\Complex}{\mathbb{C}}
+		\providecommand{\KField}{\mathbb{K}}
 	
 %equality lingo
 	%must be equal
-		\newcommand{\mbeq}{\overset{!}{=}} 
+		\providecommand{\mbeq}{\overset{!}{=}} 
 
 % function
 	%Domain
-		\newcommand{\dom}{\mathit{dom}}
+		\providecommand{\dom}{\mathit{dom}}
 	%Range
-		\newcommand{\ran}{\mathit{ran}}
+		\providecommand{\ran}{\mathit{ran}}
 	%Codomain
-		\newcommand{\cod}{\mathit{cod}}
+		\providecommand{\cod}{\mathit{cod}}
 	%Identity Operator
-		\newcommand{\IdOp}{\mathds{1}}
+		\providecommand{\IdOp}{\mathds{1}}
 	%Identity Map
-		\newcommand{\IdMap}{\textrm{id}}	
+		\providecommand{\IdMap}{\textrm{id}}	
+	%Identity Element
+		\providecommand{\IdElem}{\mathds{I}}
 
 % Set Theory
 	% Power set (insieme delle parti
-		\newcommand{\PowerSet}{\mathcal{P}}
+		\providecommand{\PowerSet}{\mathcal{P}}
 
 %Differential Geometry
 	% Atlas
-		\newcommand{\Atlas}{\mathcal{A}}
+		\providecommand{\Atlas}{\mathcal{A}}
 	%support
-		\newcommand{\supp}{\textrm{supp}}
+		\providecommand{\supp}{\textrm{supp}}
 	%set of tangent fields
-		\newcommand{\FieldSet}{\mathfrak{X}}
+		\providecommand{\FieldSet}{\mathfrak{X}}
 
 	
 	
 %Category Theory
 	%http://katmat.math.uni-bremen.de/acc/acc.pdf
 	%Object set
-		\newcommand{\Obj}{\mathit{Ob}}
+		\providecommand{\Obj}{\mathit{Ob}}
 	%set of arrows between two objects
-		%\newcommand{\hom}{hom}
+		%\providecommand{\hom}{hom}
 	%set of all the arrows (morphisms) forming the category
-		\newcommand{\Mor}{\mathit{Mor}}
+		\providecommand{\Mor}{\mathit{Mor}}
 	%set of isomorphism
-		\newcommand{\iso}{\textrm{iso}}
-		\newcommand{\Iso}{\mathit{Iso}}
+		\providecommand{\iso}{\textrm{iso}}
+		\providecommand{\Iso}{\mathit{Iso}}
 
 %Geometric Lagrangian Mechanics
 	% Kinematic Configurations
-		\newcommand{\Conf}{\mathtt{C}}
+		\providecommand{\Conf}{\mathtt{C}}
 	%Solutions Space
-		\newcommand{\Sol}{\mathtt{Sol}}
+		\providecommand{\Sol}{\mathtt{Sol}}
 	%Lagrangian class
-		\newcommand{\Lag}{\mathsf{Lag}}
+		\providecommand{\Lag}{\mathsf{Lag}}
 	%Lagrangiana
-		\newcommand{\Lagrangian}{\mathcal{L}}
+		\providecommand{\Lagrangian}{\mathcal{L}}
 	%Data
-		\newcommand{\Data}{\mathsf{Data}}
+		\providecommand{\Data}{\mathsf{Data}}
 	%unique solution map
-		\newcommand{\SolMap}{\mathbf{s}}
+		\providecommand{\SolMap}{\mathbf{s}}
 	%Classical Observables
-		\newcommand{\Obs}{\mathcal{E}}	
+		\providecommand{\Obs}{\mathcal{E}}	
 	%Phase Space
-		\newcommand{\Phase}{\mathcal{M}}			
+		\providecommand{\Phase}{\mathcal{M}}			
 		
 %Algebraic quantum theory
-		\newcommand{\ObsAlg}{\mathit{A}}
+		\providecommand{\ObsAlg}{\mathit{A}}
 		
 		
 %Linear Differential Operators
 	%Green Operators
-		\newcommand{\GreenRet}{G^+}
-		\newcommand{\GreenAdv}{G^-}
+		\providecommand{\GreenRet}{G^+}
+		\providecommand{\GreenAdv}{G^-}
 	
 	%Hom bundle
-		\newcommand{\Hom}{\textrm{Hom}}
+		\providecommand{\Hom}{\textrm{Hom}}
 		
 
 %General Relativity
 	%Chronological Past/Future
-	\newcommand{\ChronoPast}{\mathbf{I}_M^-}
-	\newcommand{\ChronoFut}{\mathbf{I}_M^+}
-	\newcommand{\ChronoPM}{\mathbf{I}_M^\pm}
+	\providecommand{\ChronoPast}{\mathbf{I}_M^-}
+	\providecommand{\ChronoFut}{\mathbf{I}_M^+}
+	\providecommand{\ChronoPM}{\mathbf{I}_M^\pm}
 
 	%Causal Past/Future
-	\newcommand{\CausalPast}{\mathbf{J}_M^-}
-	\newcommand{\CausalFut}{\mathbf{J}_M^+}
-	\newcommand{\CausalPM}{\mathbf{J}_M^\pm}	
+	\providecommand{\CausalPast}{\mathbf{J}_M^-}
+	\providecommand{\CausalFut}{\mathbf{J}_M^+}
+	\providecommand{\CausalPM}{\mathbf{J}_M^\pm}	
 	
 	%Set of all cauchy surfaces
-	\newcommand{\CauchyClass}{\PowerSet_C}
+	\providecommand{\CauchyClass}{\PowerSet_C}
 	
 	%Peierls
-	\newcommand{\EffectOp}{\mathbf{D}}
-		
+	\providecommand{\EffectOp}{\mathbf{D}}
