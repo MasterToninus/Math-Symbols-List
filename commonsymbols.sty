@@ -4,7 +4,15 @@
 %
 %-------------------------------------------------------------------------------------------
 
+%\NeedsTeXFormat{LaTeX2e}[1994/06/01]
+\ProvidesPackage{commonmathsymb}[2017/01/13 Custom Package]
 
+\RequirePackage{amssymb}
+\RequirePackage{mathtools}% Loads amsmath
+\RequirePackage{dsfont} % identity symbol
+
+%% 'basic' option
+\DeclareOption{basic}{
 	%Number fields
 		\providecommand{\Real}{\mathbb{R}}
 		\providecommand{\Natural}{\mathbb{N}}
@@ -12,7 +20,7 @@
 		\providecommand{\Rational}{\mathbb{Q}}
 		\providecommand{\Complex}{\mathbb{C}}
 		\providecommand{\KField}{\mathbb{K}}
-	
+		
 %equality lingo
 	%must be equal
 		\providecommand{\mbeq}{\overset{!}{=}} 
@@ -34,19 +42,30 @@
 % Set Theory
 	% Power set (insieme delle parti
 		\providecommand{\PowerSet}{\mathcal{P}}
+		
+% Set building http://math.stackexchange.com/questions/309506/symbol-for-such-that-not-in-set
+		\providecommand{\st}{\quad\vert\quad}
 
-%Differential Geometry
+}
+
+%% 'TensorAlgebra' option
+\DeclareOption{tensors}{
+	\newcommand{\TensorSpace}{\mathcal{T}}
+}
+
+%% 'Differential Geometry' option
+\DeclareOption{diffgeo}{
 	% Atlas
 		\providecommand{\Atlas}{\mathcal{A}}
 	%support
 		\providecommand{\supp}{\textrm{supp}}
 	%set of tangent fields
 		\providecommand{\FieldSet}{\mathfrak{X}}
+}
 
-	
-	
-%Category Theory
+%% 'Category Theory' option
 	%http://katmat.math.uni-bremen.de/acc/acc.pdf
+\DeclareOption{cat}{
 	%Object set
 		\providecommand{\Obj}{\mathit{Ob}}
 	%set of arrows between two objects
@@ -56,8 +75,10 @@
 	%set of isomorphism
 		\providecommand{\iso}{\textrm{iso}}
 		\providecommand{\Iso}{\mathit{Iso}}
+}
 
-%Geometric Lagrangian Mechanics
+%% 'Geometric Mechanics' option
+\DeclareOption{geomec}{
 	% Kinematic Configurations
 		\providecommand{\Conf}{\mathtt{C}}
 	%Solutions Space
@@ -73,22 +94,29 @@
 	%Classical Observables
 		\providecommand{\Obs}{\mathcal{E}}	
 	%Phase Space
-		\providecommand{\Phase}{\mathcal{M}}			
+		\providecommand{\Phase}{\mathcal{M}}		
 		
-%Algebraic quantum theory
+	%Peierls
+		\providecommand{\EffectOp}{\mathbf{D}}	
+}
+	
+%% 'Algebraic quantum theory' option
+\DeclareOption{aqft}{
 		\providecommand{\ObsAlg}{\mathit{A}}
-		
-		
-%Linear Differential Operators
+}
+
+%% 'Linear partial Differential Operators' option
+\DeclareOption{ldpo}{
 	%Green Operators
 		\providecommand{\GreenRet}{G^+}
 		\providecommand{\GreenAdv}{G^-}
 	
 	%Hom bundle
 		\providecommand{\Hom}{\textrm{Hom}}
-		
+}
 
-%General Relativity
+%% 'General Relativity' option
+\DeclareOption{genrel}{
 	%Chronological Past/Future
 	\providecommand{\ChronoPast}{\mathbf{I}_M^-}
 	\providecommand{\ChronoFut}{\mathbf{I}_M^+}
@@ -101,6 +129,15 @@
 	
 	%Set of all cauchy surfaces
 	\providecommand{\CauchyClass}{\PowerSet_C}
-	
-	%Peierls
-	\providecommand{\EffectOp}{\mathbf{D}}
+}
+
+%% tells which are the default.
+\ExecuteOptions{basic}
+
+\ProcessOptions\relax
+
+
+
+
+
+\endinput
