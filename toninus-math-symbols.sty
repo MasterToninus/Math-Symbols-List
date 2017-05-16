@@ -5,7 +5,7 @@
 %-------------------------------------------------------------------------------------------
 
 %\NeedsTeXFormat{LaTeX2e}[1994/06/01]
-\ProvidesPackage{commonmathsymb}[2017/01/13 Custom Package]
+\ProvidesPackage{toninus-math-symbol}[2017/01/13 Custom Package]
 
 \RequirePackage{amssymb}
 \RequirePackage{mathtools}% Loads amsmath
@@ -46,6 +46,9 @@
 		
 % Set building http://math.stackexchange.com/questions/309506/symbol-for-such-that-not-in-set
 		\providecommand{\st}{\quad\vert\quad}
+		
+% Linear Algebra
+	\providecommand{\im}{\textrm{im}}
 
 }
 
@@ -62,9 +65,18 @@
 		\providecommand{\supp}{\textrm{supp}}
 	%set of tangent fields
 		\providecommand{\FieldSet}{\mathfrak{X}}
+	%external derivative
+		\providecommand{\ExtD}{\textrm{d}}
+}
+
+%%'Multisymplectic geometry' option
+\DeclareOption{multisym}{
+
+	\providecommand{\AffDualJet}{ J^{1 \TwistedAffine}E }
+	\providecommand{\LinDualJet}{ \overrightarrow{J^{1 \TwistedLinear}E} }
 
 	%twisted dual
-		\providecommand{\twistedlinear}{\varoast}	
+		\providecommand{\TwistedLinear}{\varoast}	
 
 	%twisted affine dual
 %https://tex.stackexchange.com/questions/36006/importing-single-symbol-from-mnsymbol
@@ -84,7 +96,7 @@
 
 \DeclareMathSymbol{\ostar}{\mathrel}{MnSyC}{102}
 	
-		\providecommand{\twistedaffine}{\ostar}			
+		\providecommand{\TwistedAffine}{\ostar}			
 	
 }
 
@@ -112,6 +124,8 @@
 		\providecommand{\Lag}{\mathsf{Lag}}
 	%Lagrangian
 		\providecommand{\Lagrangian}{\mathcal{L}}
+	%Hamiltonian
+		\providecommand{\Hamiltonian}{\mathcal{H}}
 	%Data
 		\providecommand{\Data}{\mathsf{Data}}
 	%unique solution map
