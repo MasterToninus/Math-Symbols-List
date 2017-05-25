@@ -10,6 +10,7 @@
 \RequirePackage{amssymb}
 \RequirePackage{mathtools}% Loads amsmath
 \RequirePackage{dsfont} % identity symbol
+%\RequirePackage{commath} % consistent symbol of derivation
 \usepackage[only,varoast]{stmaryrd} %circled asterisk
 
 %% 'basic' option
@@ -44,11 +45,17 @@
 	% Power set (insieme delle parti
 		\providecommand{\PowerSet}{\mathcal{P}}
 		
-% Set building http://math.stackexchange.com/questions/309506/symbol-for-such-that-not-in-set
+% Set building 
+%% http://math.stackexchange.com/questions/309506/symbol-for-such-that-not-in-set
 		\providecommand{\st}{\quad\vert\quad}
 		
 % Linear Algebra
 	\providecommand{\im}{\textrm{im}}
+	
+% differential Symbol
+%% https://tex.stackexchange.com/questions/14821/whats-the-proper-way-to-typeset-a-differential-operator
+	\renewcommand{\d}[1]{\ensuremath{\operatorname{d}\!{#1}}}
+	\providecommand{\diff}{\textrm{d}}
 
 }
 
@@ -66,8 +73,7 @@
 	%set of tangent fields
 		\providecommand{\FieldSet}{\mathfrak{X}}
 	%external derivative
-		\providecommand{\ExtD}{\textrm{d}}
-		\providecommand{\d}{\textrm{d}}
+		\providecommand{\ExtD}{\diff}
 	%Tangent Map
 		\providecommand{\T}{\textrm{T}}
 	%Lie Derivative
