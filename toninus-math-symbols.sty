@@ -12,6 +12,7 @@
 \RequirePackage{dsfont} % identity symbol
 %\RequirePackage{commath} % consistent symbol of derivation
 \usepackage[only,varoast]{stmaryrd} %circled asterisk
+\usepackage{bbm} %category font
 
 %% 'basic' option
 \DeclareOption{basic}{
@@ -114,7 +115,7 @@
 %% 'Category Theory' option
 	%http://katmat.math.uni-bremen.de/acc/acc.pdf
 \DeclareOption{cat}{
-		\providecommand{\cat}{\mathbb{C}}
+		\providecommand{\cat}[1][C]{\mathbbm{#1}}
 	%Object set
 		\providecommand{\Obj}{\mathit{ob}}
 	%collection of arrows between two objects
