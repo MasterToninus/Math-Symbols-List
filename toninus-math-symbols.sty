@@ -114,14 +114,15 @@
 %% 'Category Theory' option
 	%http://katmat.math.uni-bremen.de/acc/acc.pdf
 \DeclareOption{cat}{
-		\providecommand{\cat}{\mathbb{C}}
+		\providecommand{\cat}[1][C]{\mathbbm{#1}}
 	%Object set
-		\providecommand{\Obj}{\mathit{ob}}
+		\providecommand{\ob}{\mathit{ob}}
+		\providecommand{\Obj}{\mathit{Ob}} %Back-compatibility
 	%collection of arrows between two objects
-		\providecommand{\mor}{hom}
+		\providecommand{\mor}{hom} %Back-compatibility
 		\providecommand{\hom}{\mathit{hom}}
 	%collection of all the arrows (morphisms) forming the category
-		\providecommand{\Mor}{\mathit{Mor}}
+		\providecommand{\Mor}{\mathit{Mor}} %Back-compatibility
 		\providecommand{\Arr}{\mathit{Arr}}
 	%collection of isomorphism between two objects
 		\providecommand{\iso}{\textrm{iso}}
